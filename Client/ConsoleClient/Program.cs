@@ -166,6 +166,7 @@ namespace ConsoleClient
             }
         }
 
+
         // Синхронизирует список сообщений с представлением
         static void MessagesUpdate()
         {
