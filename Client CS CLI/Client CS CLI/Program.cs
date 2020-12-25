@@ -17,11 +17,11 @@ namespace Client_CS_CLI
 
             string IP;
             string port;
-            Console.Write("Enter IP(or press enter or default):");
+            Console.Write("Введите IP-адрес (enter для стандартного):");
             IP = Console.ReadLine();
             if (!string.IsNullOrEmpty(IP))
             {
-                Console.Write("Enter port:");
+                Console.Write("Введите порт:");
                 port = Console.ReadLine();
                 ConfigManager.Config.IP = IP;
                 if (int.TryParse(port, out var configPort))
@@ -80,7 +80,7 @@ namespace Client_CS_CLI
                 ConfigManager.Config.Token = temp.Token;
 
                 ConfigManager.Config.RegData = regData;
-                Console.WriteLine("Success!");
+                Console.WriteLine("Соединение установлено!");
                 ConfigManager.WriteConfig();
                 break;
             } while (true);
@@ -93,12 +93,12 @@ namespace Client_CS_CLI
         /// <returns>Связка Логин пароль</returns>
         private static RegData GetRegData(HttpWebRequest httpWebRequest)
         {
-            Console.Write("Enter your nick> ".PadRight(Console.BufferWidth - 1));
+            Console.Write("Введите логин > ".PadRight(Console.BufferWidth - 1));
             Console.Write("".PadRight(Console.BufferWidth - 1));
             Console.SetCursorPosition(0, 0);
-            Console.Write("Enter your nick> ");
+            Console.Write("Введите логин > ");
             var nick = Console.ReadLine();
-            Console.Write("Enter your password> ");
+            Console.Write("Введите пароль > ");
             var password = Console.ReadLine();
 
             var regData = new RegData {Username = nick, Password = password};
@@ -115,7 +115,7 @@ namespace Client_CS_CLI
         /// </summary>
         private static async void Post()
         {
-            Console.Write("Enter message(or /u for update)>        \b\b\b\b\b\b\b");
+            Console.Write("Введите сообщение (/u для обновления истории сообщений)>        \b\b\b\b\b\b\b");
             var msg = Console.ReadLine();
             if (msg.Equals("/update") || msg.Equals("/u"))
             {
@@ -142,7 +142,7 @@ namespace Client_CS_CLI
             var httpResponse = (HttpWebResponse) httpWebRequest.GetResponse();
             using var streamReader = new StreamReader(httpResponse.GetResponseStream());
             var result = streamReader.ReadToEnd();
-            if (result != "ok") Console.WriteLine("Something went wrong");
+            if (result != "Ок.") Console.WriteLine("Что-то пошло не так.");
         }
 
         /// <summary>
