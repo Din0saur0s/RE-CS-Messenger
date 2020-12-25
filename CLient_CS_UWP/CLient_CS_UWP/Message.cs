@@ -64,7 +64,7 @@ namespace CLient_CS_UWP
                 // If received message, use accent background
                 // If sent message, use light gray
                 case HorizontalAlignment.Left:
-                    BgColor = new SolidColorBrush(Colors.DarkGray);
+                    BgColor = new SolidColorBrush(Colors.AliceBlue);
                     PersonPictureVisibility = Visibility.Visible;
                     TopHeight = "*";
                     break;
@@ -75,7 +75,7 @@ namespace CLient_CS_UWP
                     TopHeight = "0";
                     break;
                 case HorizontalAlignment.Center:
-                    BgColor = new SolidColorBrush(Colors.Gray);
+                    BgColor = new SolidColorBrush(Colors.LightGray);
                     PersonPictureVisibility = Visibility.Collapsed;
                     TopHeight = "0";
                     break;

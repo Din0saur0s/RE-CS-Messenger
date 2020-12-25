@@ -31,31 +31,20 @@
             IsTabStop="False"
             UseSystemFocusVisuals="False"
             VerticalScrollBarVisibility="Auto"
-            VerticalScrollMode="Auto" FocusVisualSecondaryBrush="{x:Null}" BorderBrush="{x:Null}" Background="{x:Null}">
+            VerticalScrollMode="Auto" FocusVisualSecondaryBrush="{x:Null}" BorderBrush="{x:Null}">
+            <ScrollViewer.Background>
+                <ImageBrush ImageSource="/Assets/SplashScreen.scale-200.jpg"/>
+            </ScrollViewer.Background>
             <StackPanel x:Name="Panel" HorizontalAlignment="Left" FocusVisualSecondaryBrush="{x:Null}" Width="200" Height="1000" FocusVisualPrimaryBrush="{x:Null}">
                 <TextBlock
                     Style="{StaticResource TitleTextBlockStyle}"
                     Margin="0,4,0,0"
-                    Text="Предъявите документы" MinWidth="200" />
-                <TextBox Name="LoginBox" PlaceholderText="Имя" KeyDown="LoginBox_OnKeyDown" Background="{x:Null}" TextWrapping="Wrap" RequestedTheme="Default" />
+                    Text="Предъявите документы" MinWidth="200" FocusVisualPrimaryBrush="#66000000" />
+                <TextBox Name="LoginBox" PlaceholderText="Имя" KeyDown="LoginBox_OnKeyDown" Background="#66000000" TextWrapping="Wrap" RequestedTheme="Default" />
                 <PasswordBox Name="PasswordBox" PlaceholderText="Код безопасности" KeyDown="PasswordBox_OnKeyDown" />
                 <Button Content="Войти" HorizontalAlignment="Center" Click="ButtonBase_OnClick" Margin="5" />
                 <TextBlock Text="" HorizontalAlignment="Center" Name="WarningText" />
             </StackPanel>
         </ScrollViewer>
-
-        <Frame x:Name="ContentFrame" Opacity="0.5" Navigated="ContentFrame_Navigated" VerticalContentAlignment="Stretch" RequestedTheme="Dark" FocusVisualPrimaryBrush="{x:Null}" FocusVisualSecondaryBrush="{x:Null}" Foreground="{x:Null}" Visibility="Visible" Content="StackPanel" >
-            <Frame.ContentTransitions>
-                <TransitionCollection>
-                    <ContentThemeTransition/>
-                </TransitionCollection>
-            </Frame.ContentTransitions>
-            <Frame.Background>
-                <ImageBrush ImageSource="ms-appx:///Assets/SplashScreen.scale-125.jpg"/>
-            </Frame.Background>
-            <Frame.OpacityTransition>
-                <ScalarTransition/>
-            </Frame.OpacityTransition>
-        </Frame>
     </Grid>
 </Page>

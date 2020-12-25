@@ -35,13 +35,13 @@ namespace CLient_CS_UWP
         {
             if (LoginBox.Text.Length >= 20 || LoginBox.Text == "" || LoginBox.Text.Contains(" "))
             {
-                WarningText.Text = "Invalid nickname format";
+                WarningText.Text = "Подозрительно длинное имя";
                 return;
             }
 
             if (!CheckNickUnicall())
             {
-                WarningText.Text = "User with this nickname does not exist";
+                WarningText.Text = "В базе данных нет такого имени";
                 return;
             }
 
@@ -67,7 +67,7 @@ namespace CLient_CS_UWP
             }
             catch (Exception)
             {
-                WarningText.Text = "Unauthorized";
+                WarningText.Text = "Авторизация не прошла";
                 return;
             }
 
@@ -77,7 +77,7 @@ namespace CLient_CS_UWP
             ConfigManager.Config.Token = temp.Token;
 
             ConfigManager.Config.RegData = regData;
-            WarningText.Text = "Success!";
+            WarningText.Text = "Подключение установлено!";
             ConfigManager.WriteConfig();
             var nvMain = (NavigationView) Frame.FindName("nvMain");
             if (nvMain != null) nvMain.SelectedItem = nvMain.MenuItems.OfType<NavigationViewItem>().Last();

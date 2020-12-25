@@ -42,7 +42,7 @@
             <uap:ShowOn Tile="square310x310Logo"/>
           </uap:ShowNameOnTiles>
         </uap:DefaultTile >
-        <uap:SplashScreen Image="Assets\ChatScreen.png"  BackgroundColor="#004577"/>
+        <uap:SplashScreen Image="Assets\SplashScreen.png"  BackgroundColor="#004577"/>
         <uap:LockScreen BadgeLogo="Assets\BadgeLogo.png" Notification="badgeAndTileText"/>
       </uap:VisualElements>
     </Application>

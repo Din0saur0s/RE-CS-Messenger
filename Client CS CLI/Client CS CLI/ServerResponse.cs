@@ -30,7 +30,7 @@ namespace Client_CS_CLI
                 var httpResponse = (HttpWebResponse) httpWebRequest.GetResponse();
                 var streamReader = new StreamReader(httpResponse.GetResponseStream());
                 var result = await streamReader.ReadToEndAsync();
-                if (result != "ok") throw new Exception("Something went wrong");
+                if (result != "oк") throw new Exception("Что-то пошло не так");
             }
             catch (Exception)
             {

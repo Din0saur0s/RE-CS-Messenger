@@ -71,9 +71,9 @@ namespace CLient_CS_UWP
             var deleteFileDialog = new ContentDialog
             {
                 Title = "GROUP HW",
-                Content = "Open the official website?",
-                PrimaryButtonText = "Open",
-                SecondaryButtonText = "Close"
+                Content = "Отправиться на поиски Магистра Йоды?",
+                PrimaryButtonText = "Да",
+                SecondaryButtonText = "Нет"
             };
 
             var result = await deleteFileDialog.ShowAsync();

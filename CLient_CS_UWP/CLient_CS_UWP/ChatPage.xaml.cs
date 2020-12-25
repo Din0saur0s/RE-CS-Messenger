@@ -65,10 +65,10 @@ namespace CLient_CS_UWP
         {
             var dialog = new ContentDialog
             {
-                Title = "You are not logged in!",
-                Content = "Open login or register page",
-                PrimaryButtonText = "Login",
-                SecondaryButtonText = "Register"
+                Title = "Вы не в сети!",
+                Content = "Войдите или зарегистрируйтесь",
+                PrimaryButtonText = "Вход",
+                SecondaryButtonText = "Регистрация"
             };
 
             var result = await dialog.ShowAsync();
@@ -240,7 +240,7 @@ namespace CLient_CS_UWP
                 var httpResponse = (HttpWebResponse) httpWebRequest.GetResponse();
                 var streamReader = new StreamReader(httpResponse.GetResponseStream());
                 var result = streamReader.ReadToEnd();
-                if (result != "ok") Console.WriteLine("Something went wrong");
+                if (result != "ok") Console.WriteLine("Что-то пошло не так");
             }
             catch (WebException)
             {
@@ -291,6 +291,11 @@ namespace CLient_CS_UWP
         {
             MessageBox.Focus(FocusState.Programmatic);
             CoreInputView.GetForCurrentView().TryShow(CoreInputViewKind.Emoji);
+        }
+
+        private void MessagesListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }
