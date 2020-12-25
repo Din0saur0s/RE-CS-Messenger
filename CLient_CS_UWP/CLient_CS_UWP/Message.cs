@@ -57,7 +57,7 @@ namespace CLient_CS_UWP
         public Message(HorizontalAlignment align, bool online)
         {
             MsgAlignment = align;
-            OnlineBrush = online ? new SolidColorBrush(Colors.DarkGreen) : new SolidColorBrush(Colors.Black);
+            OnlineBrush = online ? new SolidColorBrush(Colors.DarkRed) : new SolidColorBrush(Colors.Black);
 
             switch (MsgAlignment)
             {
