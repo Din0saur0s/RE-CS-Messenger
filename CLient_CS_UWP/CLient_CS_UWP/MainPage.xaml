@@ -1,0 +1,31 @@
+﻿<Page
+    x:Class="CLient_CS_UWP.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <NavigationView x:Name="nvMain"
+                    IsSettingsVisible="True"
+                    IsBackButtonVisible="Collapsed"
+                    IsBackEnabled="False"
+                    SelectionChanged="NavigationView_SelectionChanged"
+                    PaneTitle="Да пребудет с вами Сила!"
+                    PaneDisplayMode="LeftCompact"
+                    SelectionFollowsFocus="Disabled"
+                    IsTabStop="False" RequestedTheme="Dark">
+        <NavigationView.MenuItems>
+            <NavigationViewItem Content="Предъявить документы" Tag="LoginPage" x:Name="LoginPageNv" />
+            <NavigationViewItem Content="Присоединиться к Галактической Республике" Tag="RegisterPage" x:Name="RegisterPageNv" />
+            <NavigationViewItem Content="Совет Джедаев" Tag="ChatPage" x:Name="ChatPageNv" />
+        </NavigationView.MenuItems>
+
+        <Frame x:Name="ContentFrame" >
+            <Frame.Background>
+                <ImageBrush ImageSource="/Assets/SplashScreen.scale-100.jpg"/>
+            </Frame.Background>
+        </Frame>
+    </NavigationView>
+</Page>
