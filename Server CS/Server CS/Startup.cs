@@ -55,7 +55,7 @@ namespace Server_CS
                         Program.Messages.Add(new Message
                         {
                             Name = "",
-                            Text = $"{user.Key} left",
+                            Text = $"{user.Key} не в сети",
                             Ts = (int) (DateTime.UtcNow - new DateTime(1970, 1, 1)).TotalSeconds
                         });
 

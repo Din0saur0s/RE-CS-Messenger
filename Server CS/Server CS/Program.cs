@@ -46,11 +46,11 @@ namespace Server_CS
             }
             else
             {
-                Console.Write("Enter IP(or press enter or default):");
+                Console.Write("Введите IP (enter для стандартного):");
                 IP = Console.ReadLine();
                 if (!string.IsNullOrEmpty(IP))
                 {
-                    Console.Write("Enter port:");
+                    Console.Write("Введите порт:");
                     port = Console.ReadLine();
                     Url = $"http://{IP}:{port}";
                 }

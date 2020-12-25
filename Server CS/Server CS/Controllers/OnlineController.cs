@@ -45,12 +45,12 @@ namespace Server_CS.Controllers
                 Program.Messages.Add(new Message
                 {
                     Name = "",
-                    Text = $"{name} connected",
+                    Text = $"{name} на связи",
                     Ts = (int) (DateTime.UtcNow - new DateTime(1970, 1, 1)).TotalSeconds
                 });
             }
 
-            return "ok";
+            return "ок";
         }
     }
 }
