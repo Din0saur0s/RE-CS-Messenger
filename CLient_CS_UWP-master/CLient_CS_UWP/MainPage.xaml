@@ -1,0 +1,26 @@
+﻿<Page
+    x:Class="CLient_CS_UWP.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <NavigationView x:Name="nvMain"
+                    IsSettingsVisible="True"
+                    IsBackButtonVisible="Collapsed"
+                    IsBackEnabled="False"
+                    SelectionChanged="NavigationView_SelectionChanged"
+                    PaneTitle="Pane Title"
+                    PaneDisplayMode="Top"
+                    SelectionFollowsFocus="Disabled"
+                    IsTabStop="False">
+        <NavigationView.MenuItems>
+            <NavigationViewItem Content="Login" Tag="LoginPage" x:Name="LoginPageNv" />
+            <NavigationViewItem Content="Chat" Tag="ChatPage" x:Name="ChatPageNv" />
+        </NavigationView.MenuItems>
+
+        <Frame x:Name="ContentFrame" />
+    </NavigationView>
+</Page>
